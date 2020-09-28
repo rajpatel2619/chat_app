@@ -30,6 +30,8 @@ dependencies:
   firebase_storage: ^4.0.0
   firebase_messaging: ^7.0.0
   flutter_spinkit: "^4.1.2"
+  intl: ^0.16.1
+  
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -39,6 +41,14 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.8.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "dev_assets/icon.png"
+  adaptive_icon_background: "#191919"
+  adaptive_icon_foreground: "dev_assets/icon-adaptive.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
