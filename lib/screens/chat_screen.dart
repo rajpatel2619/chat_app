@@ -1,29 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-class ChatScreen extends StatefulWidget {
-  @override
-  _ChatScreenState createState() => _ChatScreenState();
-}
-
-class _ChatScreenState extends State<ChatScreen> {
-  @override
-  void initState() {
-    super.initState();
-    Firebase.initializeApp().whenComplete(() {
-      print("completed");
-      setState(() {});
-    });
-  }
-@override
-  void didChangeDependencies() {
-      Firebase.initializeApp().whenComplete(() {
-      print("completed");
-      setState(() {});
-    });
-    super.didChangeDependencies();
-  }
+class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,15 +30,9 @@ class _ChatScreenState extends State<ChatScreen> {
         onPressed: () {
           FirebaseFirestore.instance
               .collection('chats/U4WZwc8JaRV8bc8DETwO/messages')
-              .add({
-                'text':'This was added by clicking'
-              });
+              .add({'text': 'This was added by clicking'});
         },
       ),
     );
   }
 }
-
-// .listen((data) {
-//             data.docs.forEach((element) {
-//               print(element.data()['text']);
